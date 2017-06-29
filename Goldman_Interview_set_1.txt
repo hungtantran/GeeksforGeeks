@@ -5,18 +5,32 @@ It comprised three papers that were held back to back and took approximately thr
 ….Second one tested our coding skills. Few of the questions I can recollect:
 
 Given a set of numbers, find the pairs whose sum is divisible by k.
+Solution idea: create a hashmap with key as the modulus of the set members divided by k and value as the set members themselves
+Runtime: O(n), space O(n)
 
 Given a number find the next largest palindrome number (e.g. if number is 100 then the next largest palindrome is 101).
+Solution idea:
++ Divide the number into 2 half, the left and right half (if the number of digit is odd, exclude the middle digit)
++ If reverse of the left half is greater than the right half, then the palindrome is the left half and the reverse of the left half
++ If reverse of the left half is less than or equal the right half, then the palindrome is the left half + 1 and the reverse of that number
 
 ….The third paper tested our knowledge of computer science subjects. It was mainly focused on Networks and required us to know the basics of TCP/IP, time to live (TTL) etc.
+
 
 Interview Round:
 1) Tell me about yourself. (This was totally unexpected!)
 
 2) Find the probability that three points chosen on a circle lie on the same semi-circle.
+Solution idea: 1/2
+Generalized: the probability that n points chosen on a circle lie on the same semi-circle is (1/2) ^ (n-2)
 
 3) In a matrix a saddle point is defined as the point such that, it has the maximum value in a corresponding row and the minimum value in the corresponding column. Given a NXN matrix find the maximum possible saddle points.
+Solution idea:
+If maximum and minimum imply greater or equal and less than or equal, then there is at most N^2 saddle points when all the cells have the same value
+If maximum and minimum imply strictly greater and strictly less than, then there is at most 1 point
 
 4) Given that you toss a fair coin, what is the expected number of tosses required before you get n consecutive heads?
+(p ^ (-n) - 1) / (1 - p)
+https://www.quora.com/What-is-the-expected-number-of-coin-flips-until-you-get-two-heads-in-a-row/answer/Michael-Hochster
 
 This article is compiled by Vikram Goyal. If you like GeeksforGeeks and would like to contribute, you can also write an article and mail your article to contribute@geeksforgeeks.org. See your article appearing on the GeeksforGeeks main page and help other Geeks.
